@@ -53,6 +53,7 @@ const App = () => {
         name="Abdullah Furkan Özbek"
         github="https://github.com/afozbek"
       />
+      <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" />
     </div>
   );
 };
