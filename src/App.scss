@@ -73,7 +73,7 @@ button {
   }
 }
 
-.timer-wrapper {
+.timer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +84,7 @@ button {
   border: 7px solid #13353a;
   border-radius: 40px;
 
-  .timer {
+  .timer-wrapper {
     margin: 1.2rem 0;
 
     #timer-label {

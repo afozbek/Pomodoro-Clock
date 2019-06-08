@@ -1,5 +1,6 @@
 import React from "react";
 
+// * Author Component
 const Author = props => {
   return (
     <div id="author" className="author">
@@ -10,7 +11,7 @@ const Author = props => {
         </span>{" "}
         by
       </p>
-      <a href={props.github} target="_blank">
+      <a href={props.github} target="_blank" rel="noopener noreferrer">
         {props.name}
       </a>
     </div>
