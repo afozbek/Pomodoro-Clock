@@ -1,10 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { resetContent } from "../../store/actions";
+
 const TimerControl = props => {
   return (
+    // ! Dispatch function unu oluştur
     <div className="timer-control">
-      <button id="start_stop">
+      <button
+        id="start_stop"
+        onClick={() => props.startOrStopTimer(!props.timerStarted)}
+      >
         <i className="fas fa-play" />
         <i className="fas fa-pause" />
       </button>
@@ -15,11 +21,17 @@ const TimerControl = props => {
   );
 };
 
+const mapStateToProps = state => ({
+  timerStarted: state.timerStarted
+});
+
 const mapDispatchToProps = dispatch => {
-  return {};
+  return {
+    resetInitialState: () => dispatch(resetContent())
+  };
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(TimerControl);
