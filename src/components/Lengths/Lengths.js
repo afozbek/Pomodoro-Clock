@@ -12,7 +12,6 @@ const Lengths = props => {
         decrementId="break-decrement"
         lengthId="break-length"
         incrementId="break-increment"
-        length={5}
         style={breakStyle}
       />
       <Length
@@ -21,7 +20,6 @@ const Lengths = props => {
         decrementId="session-decrement"
         lengthId="session-length"
         incrementId="session-increment"
-        length={25}
       />
     </div>
   );
