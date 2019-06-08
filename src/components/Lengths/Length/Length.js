@@ -7,10 +7,10 @@ const Length = props => {
     <div className="lengths__length" style={props.style ? props.style : null}>
       <div id={props.labelId}>{props.lengthName}</div>
       <LengthControl
+        isBreak={props.style ? true : false}
         decrementId={props.decrementId}
         lengthId={props.lengthId}
         incrementId={props.incrementId}
-        length={props.length}
       />
     </div>
   );
