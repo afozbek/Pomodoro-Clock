@@ -1,21 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
 
 import * as actions from "../../../store/actions";
 
 import { connect } from "react-redux";
 
-const LengthControl = props => {
-  const [length, setLength] = useState(props.length);
+const VALUE = 1;
 
-  const decrementClickHandler = () => {
-    if (length !== 1) {
-      setLength(length - 1);
+const LengthControl = props => {
+  const incrementClickHandler = () => {
+    if (props.isBreak) {
+      if (props.breakLength === 60) return;
+      props.incrementClickHandler({
+        breakLength: props.breakLength,
+        isBreak: true,
+        value: VALUE
+      });
+    } else {
+      if (props.sessionLength === 60) return;
+      props.incrementClickHandler({
+        sessionLength: props.sessionLength,
+        isBreak: false,
+        value: VALUE
+      });
     }
   };
 
-  const incrementClickHandler = () => {
-    if (length !== 60) {
-      setLength(length + 1);
+  const decrementClickHandler = () => {
+    debugger;
+    if (props.isBreak) {
+      if (props.breakLength === 1) return;
+      props.decrementClickHandler({
+        breakLength: props.breakLength,
+        isBreak: true,
+        value: VALUE
+      });
+    } else {
+      if (props.sessionLength === 1) return;
+      props.decrementClickHandler({
+        sessionLength: props.sessionLength,
+        isBreak: false,
+        value: VALUE
+      });
     }
   };
 
@@ -24,7 +49,9 @@ const LengthControl = props => {
       <button id={props.decrementId} onClick={decrementClickHandler}>
         <i className="fas fa-arrow-circle-down" />
       </button>
-      <div id={props.lengthId}>{length}</div>
+      <div id={props.lengthId}>
+        {props.isBreak ? props.breakLength : props.sessionLength}
+      </div>
       <button id={props.incrementId} onClick={incrementClickHandler}>
         <i className="fas fa-arrow-circle-up" />
       </button>
@@ -32,15 +59,17 @@ const LengthControl = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {};
-};
+const mapStateToProps = state => ({
+  breakLength: state.breakLength,
+  sessionLength: state.sessionLength
+});
 
-const maptDispatchToProps = dispatch => {
-  return {};
-};
+const mapDispatchToProps = dispatch => ({
+  incrementClickHandler: payload => dispatch(actions.incrementLength(payload)),
+  decrementClickHandler: payload => dispatch(actions.decrementLength(payload))
+});
 
 export default connect(
   mapStateToProps,
-  maptDispatchToProps
+  mapDispatchToProps
 )(LengthControl);
