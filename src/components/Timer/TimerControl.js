@@ -1,17 +1,25 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const TimerControl = () => {
+const TimerControl = props => {
   return (
     <div className="timer-control">
       <button id="start_stop">
-        <i class="fas fa-play" />
-        <i class="fas fa-pause" />
+        <i className="fas fa-play" />
+        <i className="fas fa-pause" />
       </button>
-      <button id="reset">
-        <i class="fas fa-sync" />
+      <button id="reset" onClick={() => props.resetInitialState()}>
+        <i className="fas fa-sync" />
       </button>
     </div>
   );
 };
 
-export default TimerControl;
+const mapDispatchToProps = dispatch => {
+  return {};
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(TimerControl);

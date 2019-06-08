@@ -21,7 +21,7 @@ const Lengths = props => {
         decrementId="session-decrement"
         lengthId="session-length"
         incrementId="session-increment"
-        length={15}
+        length={25}
       />
     </div>
   );

@@ -1,0 +1,1 @@
+export const RESET_CONTENT = "RESET_CONTENT";
