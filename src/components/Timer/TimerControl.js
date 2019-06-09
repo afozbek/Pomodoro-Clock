@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause, faSync } from "@fortawesome/free-solid-svg-icons";
 
+import * as bip from "../../assets/BeepSound.wav";
 import { resetContent, startStopTimer } from "../../store/actions";
 
 const TimerControl = props => {
   const resetClickHandler = () => {
-    let audioEl = document.getElementById("beep");
-    audioEl.pause();
-    audioEl.currentTime = 0.0;
+    let audio = new Audio(bip);
+    audio.pause();
+    audio.currentTime = 0.0;
     props.resetInitialState();
   };
 
