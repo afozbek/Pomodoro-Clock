@@ -17,11 +17,15 @@ $primary-color: #1e555c;
 }
 html {
   font-size: 16px;
-  @media screen and (min-width: 600px) and (max-width: 700px) {
-    font-size: 14px;
+  @media screen and (max-width: 400px) {
+    font-size: 10px;
   }
-  @media screen and (max-width: 600px) {
+
+  @media screen and (min-width: 401px) and (max-width: 600px) {
     font-size: 12px;
+  }
+  @media screen and (min-width: 601px) and (max-width: 700px) {
+    font-size: 14px;
   }
 }
 
@@ -60,18 +64,14 @@ button {
   @media screen and (max-width: 600px) {
     margin: 0.6rem 1rem;
   }
-
-  i {
-    font-size: 1.5rem;
-    width: 100%;
-    @media screen and (max-width: 600px) {
-      font-size: 2rem;
-    }
-  }
 }
 
 .main-wrapper {
   width: 31.5rem;
+  margin-top: 30px;
+  @media screen and (min-height: 700px) {
+    margin: 0;
+  }
 }
 
 .title {
@@ -90,6 +90,7 @@ button {
   display: flex;
   padding: 0.4rem;
   margin-bottom: 0.6rem;
+
   @media screen and (max-width: 600px) {
     margin-bottom: 1rem;
   }
@@ -132,10 +133,17 @@ button {
 
   @media screen and (max-width: 600px) {
     margin-bottom: 2rem;
+    width: 20rem;
   }
-
+  @media screen and (min-width: 601px) and (max-width: 700px) {
+    width: 18rem;
+  }
   .timer-wrapper {
     margin: 1.2rem 0;
+
+    @media screen and (max-width: 600px) {
+      margin: 1.5rem 0;
+    }
 
     #timer-label {
       font-size: 1.8rem;
@@ -160,6 +168,10 @@ button {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 1rem;
+
+  @media screen and (min-height: 700px) {
+    margin-top: 1.5rem;
+  }
 
   button {
     margin: 0 0.4rem;
@@ -195,6 +207,7 @@ button {
 
   @media screen and (max-width: 600px) {
     margin-top: 2.5rem;
+    font-size: 1.1rem;
   }
 }
 .author a {
