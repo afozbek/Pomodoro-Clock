@@ -5,9 +5,8 @@ import { calculateRemaining } from "../../store/actions";
 import useInterval from "../../hooks/useInterval";
 
 const Timer = props => {
-  // newDate.setMinutes(props.remMinutes, props.remSeconds, 0);
-  // newDate.toISOString();
   // ! My Time Interval
+  let style = null;
   useInterval(
     () => {
       props.calculateRemaining({
@@ -18,9 +17,12 @@ const Timer = props => {
     },
     props.timerStarted ? 1000 : null
   );
-  let style = null;
+
   if (props.remMinutes === 0 && props.remSeconds < 60) {
     style = { color: "rgb(165,13,13)" };
+  }
+  if (props.remMinutes === 0 && props.remSeconds === 0) {
+    document.getElementById("beep").play();
   }
   return (
     <div className="timer">
