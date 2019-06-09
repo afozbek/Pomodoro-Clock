@@ -7,10 +7,10 @@ import {
 } from "./action-types";
 
 const initialState = {
-  breakLength: 1,
-  sessionLength: 1,
+  breakLength: 5,
+  sessionLength: 25,
   label: "Session",
-  remMinutes: 1,
+  remMinutes: 25,
   remSeconds: 0,
   timerStarted: false
 };
