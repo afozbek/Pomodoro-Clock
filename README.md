@@ -3,30 +3,31 @@
 - You can see demo project from [here](https://afozbek-pomodoro-app.netlify.com/?_ga=2.20810424.1224819846.1560082344-1034779676.1559814958)
 
 - You can view project on [Sandbox](https://codesandbox.io/s/pomodoro-clock-777pm)
+
 # Pomodoro Clock Project
 
- `Pomodoro Clock` is the study management which helps you to focus when you are studying. Check out pomodoro technique from [here](https://en.wikipedia.org/wiki/Pomodoro_Technique)
+`Pomodoro Clock` is the study management which helps you to focus when you are studying. Check out pomodoro technique from [here](https://en.wikipedia.org/wiki/Pomodoro_Technique)
 
 ### Installing
 
- run `yarn install` or `yarn start`
+run `yarn install` or `yarn start`
 
 ## Deployment
 
-You can easily deploy the project over [Netlify](https://www.netlify.com/) or ``github-pages``. Check out the documentation
+You can easily deploy the project over [Netlify](https://www.netlify.com/) or `github-pages`. Check out the documentation
 
 ## Built With
 
-* [React](https://tr.reactjs.org/) - UI library for js
-* [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-* [Redux](https://redux.js.org/) - State Management
-* [Sass](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- [React](https://tr.reactjs.org/) - UI library for js
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Font Awesome](https://fontawesome.com)
+- [Redux](https://redux.js.org/) - State Management
+- [Sass](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
 ## Contributing
 
 - If you have problems please leave an `issue` from [here](https://github.com/afozbek/Burger-Hunger/issues)
 - Consider forking the project and submitting new `pull requests`. I am much likely control [my github account](https://github.com/afozbek).
-
 
 ## Authors
 
@@ -37,5 +38,3 @@ You can easily deploy the project over [Netlify](https://www.netlify.com/) or ``
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-
