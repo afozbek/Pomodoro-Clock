@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import * as bip from "../../assets/BeepSound.wav";
 import { calculateRemaining } from "../../store/actions";
 import useInterval from "../../hooks/useInterval";
 
@@ -22,7 +23,10 @@ const Timer = props => {
     style = { color: "rgb(165,13,13)" };
   }
   if (props.remMinutes === 0 && props.remSeconds === 0) {
-    document.getElementById("beep").play();
+    let audio = new Audio(bip);
+    if (audio) {
+      audio.play();
+    }
   }
   return (
     <div className="timer">
