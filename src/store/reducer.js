@@ -7,10 +7,10 @@ import {
 } from "./action-types";
 
 const initialState = {
-  breakLength: 5,
-  sessionLength: 25,
+  breakLength: 1,
+  sessionLength: 1,
   label: "Session",
-  remMinutes: 25,
+  remMinutes: 1,
   remSeconds: 0,
   timerStarted: false
 };
@@ -34,28 +34,66 @@ const rootReducer = (state = initialState, action) => {
 
 const incrementLength = (state, action) => {
   if (action.payload.isBreak) {
-    return {
-      ...state,
-      breakLength: state.breakLength + action.payload.value
-    };
+    if (state.label === "Break") {
+      return {
+        ...state,
+        remMinutes: state.breakLength + action.payload.value,
+        remSeconds: 0,
+        breakLength: state.breakLength + action.payload.value
+      };
+    } else {
+      return {
+        ...state,
+        breakLength: state.breakLength + action.payload.value
+      };
+    }
+  } else {
+    if (state.label === "Session") {
+      return {
+        ...state,
+        remMinutes: state.sessionLength + action.payload.value,
+        remSeconds: 0,
+        sessionLength: state.sessionLength + action.payload.value
+      };
+    } else {
+      return {
+        ...state,
+        sessionLength: state.sessionLength + action.payload.value
+      };
+    }
   }
-  return {
-    ...state,
-    sessionLength: state.sessionLength + action.payload.value
-  };
 };
 
 const decrementLength = (state, action) => {
   if (action.payload.isBreak) {
-    return {
-      ...state,
-      breakLength: state.breakLength - action.payload.value
-    };
+    if (state.label === "Break") {
+      return {
+        ...state,
+        remMinutes: state.breakLength - action.payload.value,
+        remSeconds: 0,
+        breakLength: state.breakLength - action.payload.value
+      };
+    } else {
+      return {
+        ...state,
+        breakLength: state.breakLength - action.payload.value
+      };
+    }
+  } else {
+    if (state.label === "Session") {
+      return {
+        ...state,
+        remMinutes: state.sessionLength - action.payload.value,
+        remSeconds: 0,
+        sessionLength: state.sessionLength - action.payload.value
+      };
+    } else {
+      return {
+        ...state,
+        sessionLength: state.sessionLength - action.payload.value
+      };
+    }
   }
-  return {
-    ...state,
-    sessionLength: state.sessionLength - action.payload.value
-  };
 };
 
 const resetContent = (state, action) => {
@@ -65,11 +103,46 @@ const resetContent = (state, action) => {
 };
 
 const startStopTimer = (state, action) => {
-  // TODO
+  return {
+    ...state,
+    remMinutes: state.remMinutes,
+    remSeconds: state.remSeconds,
+    timerStarted: !state.timerStarted
+  };
 };
 
 const calculateRemaining = (state, action) => {
-  // TODO
+  let remMinutes = action.payload.remMinutes;
+  let remSeconds = action.payload.remSeconds;
+
+  if (remSeconds === 0 && remMinutes === 0) {
+    if (action.payload.label === "Session") {
+      return {
+        ...state,
+        label: "Break",
+        remMinutes: state.breakLength === 1 ? 0 : state.breakLength,
+        remSeconds: 59
+      };
+    } else {
+      return {
+        ...state,
+        label: "Session",
+        remMinutes: state.sessionLength === 1 ? 0 : state.sessionLength,
+        remSeconds: 59
+      };
+    }
+  } else if (remSeconds === 0) {
+    return {
+      ...state,
+      remMinutes: remMinutes - 1,
+      remSeconds: 59
+    };
+  } else {
+    return {
+      ...state,
+      remSeconds: remSeconds - 1
+    };
+  }
 };
 
 export default rootReducer;
