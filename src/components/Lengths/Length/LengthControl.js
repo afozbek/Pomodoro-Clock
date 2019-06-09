@@ -53,13 +53,19 @@ const LengthControl = props => {
   return (
     <div className="lengths__length__controls">
       <button id={props.decrementId} onClick={decrementClickHandler}>
-        <FontAwesomeIcon icon={faArrowCircleDown} size="2x" />
+        <FontAwesomeIcon
+          icon={faArrowCircleDown}
+          size={window.innerWidth < 600 ? "lg" : "2x"}
+        />
       </button>
       <div id={props.lengthId}>
         {props.isBreak ? props.breakLength : props.sessionLength}
       </div>
       <button id={props.incrementId} onClick={incrementClickHandler}>
-        <FontAwesomeIcon icon={faArrowCircleUp} size="2x" />
+        <FontAwesomeIcon
+          icon={faArrowCircleUp}
+          size={window.innerWidth < 600 ? "lg" : "2x"}
+        />
       </button>
     </div>
   );
