@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/46a72239-07e4-4dcc-a4c6-0982fa7c01e8/deploy-status)](https://app.netlify.com/sites/afozbek-pomodoro-app/deploys)
 
-## Available Scripts
+- You can see demo project from [here](https://afozbek-pomodoro-app.netlify.com/?_ga=2.20810424.1224819846.1560082344-1034779676.1559814958)
 
-In the project directory, you can run:
+- You can view project on [Sandbox](https://codesandbox.io/s/pomodoro-clock-777pm)
+# Pomodoro Clock Project
 
-### `npm start`
+ `Pomodoro Clock` is the study management which helps you to focus when you are studying. Check out pomodoro technique from [here](https://en.wikipedia.org/wiki/Pomodoro_Technique)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installing
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+ run `yarn install` or `yarn start`
 
-### `npm test`
+## Deployment
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can easily deploy the project over [Netlify](https://www.netlify.com/) or ``github-pages``. Check out the documentation
 
-### `npm run build`
+## Built With
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [React](https://tr.reactjs.org/) - UI library for js
+* [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+* [Redux](https://redux.js.org/) - State Management
+* [Sass](https://sass-lang.com/) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- If you have problems please leave an `issue` from [here](https://github.com/afozbek/Burger-Hunger/issues)
+- Consider forking the project and submitting new `pull requests`. I am much likely control [my github account](https://github.com/afozbek).
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Authors
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Follow me on [_github_](https://github.com/afozbek)
+- Follow me on [_gitlab_](https://gitlab.com/afozbek)
+  > Contact me for your problems from [here](mailto:furkanozbek1995@gmail.com). I am gladly answer you 😊.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
