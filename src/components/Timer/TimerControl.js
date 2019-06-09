@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faPause, faSync } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPause, faRedoAlt } from "@fortawesome/free-solid-svg-icons";
 
 import * as bip from "../../assets/BeepSound.wav";
 import { resetContent, startStopTimer } from "../../store/actions";
@@ -24,7 +24,7 @@ const TimerControl = props => {
       </button>
       <button id="reset" onClick={resetClickHandler}>
         <FontAwesomeIcon
-          icon={faSync}
+          icon={faRedoAlt}
           size="2x"
           spin={props.timerStarted ? true : false}
         />
