@@ -5,7 +5,9 @@ import { resetContent, startStopTimer } from "../../store/actions";
 
 const TimerControl = props => {
   const resetClickHandler = () => {
-    if (props.timerStarted) return;
+    let audioEl = document.getElementById("beep");
+    audioEl.pause();
+    audioEl.currentTime = 0.0;
     props.resetInitialState();
   };
 
