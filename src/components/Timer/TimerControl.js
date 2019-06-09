@@ -5,7 +5,6 @@ import { resetContent, startStopTimer } from "../../store/actions";
 
 const TimerControl = props => {
   return (
-    // ! Dispatch function unu oluştur
     <div className="timer-control">
       <button id="start_stop" onClick={() => props.startOrStopTimer()}>
         <i className="fas fa-play" />
@@ -18,10 +17,6 @@ const TimerControl = props => {
   );
 };
 
-const mapStateToProps = state => ({
-  timerStarted: state.timerStarted
-});
-
 const mapDispatchToProps = dispatch => {
   return {
     resetInitialState: () => dispatch(resetContent()),
@@ -30,6 +25,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(TimerControl);
