@@ -1,5 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faPause, faSync } from "@fortawesome/free-solid-svg-icons";
 
 import { resetContent, startStopTimer } from "../../store/actions";
 
@@ -14,11 +16,17 @@ const TimerControl = props => {
   return (
     <div className="timer-control">
       <button id="start_stop" onClick={() => props.startOrStopTimer()}>
-        <i className="fas fa-play" />
-        <i className="fas fa-pause" />
+        <FontAwesomeIcon
+          icon={!props.timerStarted ? faPlay : faPause}
+          size="2x"
+        />
       </button>
       <button id="reset" onClick={resetClickHandler}>
-        <i className="fas fa-sync" />
+        <FontAwesomeIcon
+          icon={faSync}
+          size="2x"
+          spin={props.timerStarted ? true : false}
+        />
       </button>
     </div>
   );

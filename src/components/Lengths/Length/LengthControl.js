@@ -1,4 +1,9 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowCircleDown,
+  faArrowCircleUp
+} from "@fortawesome/free-solid-svg-icons";
 
 import * as actions from "../../../store/actions";
 
@@ -48,13 +53,13 @@ const LengthControl = props => {
   return (
     <div className="lengths__length__controls">
       <button id={props.decrementId} onClick={decrementClickHandler}>
-        <i className="fas fa-arrow-circle-down" />
+        <FontAwesomeIcon icon={faArrowCircleDown} size="2x" />
       </button>
       <div id={props.lengthId}>
         {props.isBreak ? props.breakLength : props.sessionLength}
       </div>
       <button id={props.incrementId} onClick={incrementClickHandler}>
-        <i className="fas fa-arrow-circle-up" />
+        <FontAwesomeIcon icon={faArrowCircleUp} size="2x" />
       </button>
     </div>
   );
