@@ -3,7 +3,10 @@ import React from "react";
 import Length from "./Length/Length";
 
 const Lengths = props => {
-  const breakStyle = { marginRight: "39px" };
+  let breakStyle = { marginRight: "2rem" };
+  if (window.innerWidth < 600) {
+    breakStyle = { marginRight: "0" };
+  }
   return (
     <div className="lengths">
       <Length
