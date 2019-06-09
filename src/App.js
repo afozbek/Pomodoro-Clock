@@ -1,6 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 
+import AnimatedLoad from "./hoc/AnimatedLoad";
 import Author from "./components/Author/Author";
 import Lengths from "./components/Lengths/Lengths";
 import Timer from "./components/Timer/Timer";
@@ -24,9 +24,4 @@ const App = props => {
   );
 };
 
-const mapStateToProps = state => ({
-  sessionLength: state.sessionLength,
-  breakLength: state.breakLength
-});
-
-export default connect(mapStateToProps)(App);
+export default AnimatedLoad(App);
