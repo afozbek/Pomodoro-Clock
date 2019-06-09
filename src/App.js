@@ -8,7 +8,7 @@ import TimerControl from "./components/Timer/TimerControl";
 
 const App = props => {
   return (
-    <div className="main-wrapper" id="app" style={{ marginTop: "30px" }}>
+    <div className="main-wrapper" id="app">
       <h2 className="title">Pomodoro Clock</h2>
       <Lengths />
 
