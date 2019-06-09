@@ -8,6 +8,7 @@ const VALUE = 1;
 
 const LengthControl = props => {
   const incrementClickHandler = () => {
+    if (props.timerStarted) return;
     if (props.isBreak) {
       if (props.breakLength === 60) return;
       props.incrementClickHandler({
@@ -26,7 +27,7 @@ const LengthControl = props => {
   };
 
   const decrementClickHandler = () => {
-    debugger;
+    if (props.timerStarted) return;
     if (props.isBreak) {
       if (props.breakLength === 1) return;
       props.decrementClickHandler({
@@ -61,7 +62,8 @@ const LengthControl = props => {
 
 const mapStateToProps = state => ({
   breakLength: state.breakLength,
-  sessionLength: state.sessionLength
+  sessionLength: state.sessionLength,
+  timerStarted: state.timerStarted
 });
 
 const mapDispatchToProps = dispatch => ({
