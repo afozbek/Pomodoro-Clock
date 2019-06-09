@@ -33,7 +33,6 @@ export const calculateRemaining = payload => {
   };
 };
 
-// ! Start or Stop Timer function
 export const startStopTimer = () => {
   return {
     type: START_STOP_TIMER
