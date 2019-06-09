@@ -12,7 +12,7 @@ const App = props => {
       <h2 className="title">Pomodoro Clock</h2>
       <Lengths />
 
-      <Timer timeLeft="25:00" />
+      <Timer />
 
       <TimerControl />
 
