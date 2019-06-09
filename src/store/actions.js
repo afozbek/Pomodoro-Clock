@@ -2,7 +2,8 @@ import {
   INCREMENT_LENGTH,
   DECREMENT_LENGTH,
   RESET_CONTENT,
-  CALCULATE_REMAINING
+  CALCULATE_REMAINING,
+  START_STOP_TIMER
 } from "./action-types";
 
 export const incrementLength = payload => {
@@ -33,3 +34,8 @@ export const calculateRemaining = payload => {
 };
 
 // ! Start or Stop Timer function
+export const startStopTimer = () => {
+  return {
+    type: START_STOP_TIMER
+  };
+};
