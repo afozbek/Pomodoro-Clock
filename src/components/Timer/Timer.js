@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { calculateRemaining } from "../../store/actions";
 
 const Timer = props => {
-  // TODO
   let newDate = new Date(null);
   newDate.setMinutes(props.remMinutes, props.remSeconds, 0);
   let newDateStr = newDate.toISOString().substr(14, 5);
@@ -13,7 +12,7 @@ const Timer = props => {
   return (
     <div className="timer">
       <div className="timer-wrapper">
-        <div id="timer-label">{props.timerLabel}</div>
+        <div id="timer-label">{props.label}</div>
         <div id="time-left">{props.timeLeft}</div>
       </div>
     </div>
@@ -21,6 +20,7 @@ const Timer = props => {
 };
 
 const mapStateToProps = state => ({
+  label: state.label,
   remMinutes: state.remMinutes,
   remSeconds: state.remSeconds
 });
