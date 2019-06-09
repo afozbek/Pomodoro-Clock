@@ -8,6 +8,7 @@ $primary-color: #1e555c;
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -31,8 +32,14 @@ body {
 }
 
 #root {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100vh;
 }
@@ -73,6 +80,8 @@ button {
 }
 
 .lengths {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0.4rem;
   margin-bottom: 0.6rem;
@@ -85,8 +94,14 @@ button {
     font-size: 1.8rem;
 
     &__controls {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin-top: 0.4rem;
     }
@@ -94,8 +109,14 @@ button {
 }
 
 .timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 
@@ -124,8 +145,14 @@ button {
 }
 
 .timer-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 1rem;
 
@@ -137,6 +164,8 @@ button {
   }
 
   #start_stop {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
