@@ -12,6 +12,15 @@ $primary-color: #1e555c;
   padding: 0;
   margin: 0;
 }
+html {
+  font-size: 16px;
+  @media screen and (min-width: 600px) and (max-width: 700px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
 
 body {
   background-color: $primary-color;
@@ -36,10 +45,16 @@ button {
   border: none;
   cursor: pointer;
   margin: 0.4rem 0.7rem;
+  @media screen and (max-width: 600px) {
+    margin: 0.6rem 1rem;
+  }
 
   i {
     font-size: 1.5rem;
     width: 100%;
+    @media screen and (max-width: 600px) {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -52,17 +67,22 @@ button {
   font-size: 3.1rem;
   font-weight: 500;
   margin-bottom: 1.1rem;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
 }
 
 .lengths {
   display: flex;
   padding: 0.4rem;
   margin-bottom: 0.6rem;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 1rem;
+  }
 
   &__length {
     width: 50%;
     font-size: 1.8rem;
-    // font-weight: bold;
 
     &__controls {
       display: flex;
@@ -84,12 +104,15 @@ button {
   border: 7px solid #13353a;
   border-radius: 40px;
 
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
+
   .timer-wrapper {
     margin: 1.2rem 0;
 
     #timer-label {
       font-size: 1.8rem;
-      //   font-weight: bold;
     }
 
     #time-left {
@@ -108,6 +131,9 @@ button {
 
   button {
     margin: 0 0.4rem;
+    @media screen and (max-width: 600px) {
+      margin: 0 0.6rem;
+    }
   }
 
   #start_stop {
@@ -132,8 +158,16 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 2.5rem;
+  }
 }
 .author a {
   text-decoration: none;
   color: #c54646;
+  margin-top: 0.1rem;
+  @media screen and (max-width: 600px) {
+    margin-top: 0.2rem;
+  }
 }
