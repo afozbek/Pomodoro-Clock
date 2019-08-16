@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/46a72239-07e4-4dcc-a4c6-0982fa7c01e8/deploy-status)](https://app.netlify.com/sites/afozbek-pomodoro-app/deploys)
 
-- You can see demo project from [here](https://afozbek-pomodoro-app.netlify.com/?_ga=2.20810424.1224819846.1560082344-1034779676.1559814958)
+- You can see demo project from [here](https://afozbek-pomodoro-app.netlify.com/)
 
 - You can view project on [Sandbox](https://codesandbox.io/s/pomodoro-clock-777pm)
 
