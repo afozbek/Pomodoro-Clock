@@ -6,7 +6,7 @@ import Lengths from "./components/Lengths/Lengths";
 import Timer from "./components/Timer/Timer";
 import TimerControl from "./components/Timer/TimerControl";
 
-const App = props => {
+const App = () => {
   return (
     <div className="main-wrapper" id="app">
       <h2 className="title">Pomodoro Clock</h2>

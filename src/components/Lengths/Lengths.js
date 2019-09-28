@@ -2,7 +2,7 @@ import React from "react";
 
 import Length from "./Length/Length";
 
-const Lengths = props => {
+const Lengths = () => {
   let breakStyle = { marginRight: "2rem" };
   if (window.innerWidth < 600) {
     breakStyle = { marginRight: "0" };
@@ -17,6 +17,7 @@ const Lengths = props => {
         incrementId="break-increment"
         style={breakStyle}
       />
+
       <Length
         labelId="session-label"
         lengthName="Session Length"
