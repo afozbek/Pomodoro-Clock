@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { connect } from "react-redux";
 import {
   faArrowCircleDown,
   faArrowCircleUp
@@ -7,15 +8,15 @@ import {
 
 import * as actions from "../../../store/actions";
 
-import { connect } from "react-redux";
-
 const VALUE = 1;
 
 const LengthControl = props => {
   const incrementClickHandler = () => {
     if (props.timerStarted) return;
+
     if (props.isBreak) {
       if (props.breakLength === 60) return;
+
       props.incrementClickHandler({
         breakLength: props.breakLength,
         isBreak: true,
@@ -23,6 +24,7 @@ const LengthControl = props => {
       });
     } else {
       if (props.sessionLength === 60) return;
+
       props.incrementClickHandler({
         sessionLength: props.sessionLength,
         isBreak: false,
@@ -33,8 +35,10 @@ const LengthControl = props => {
 
   const decrementClickHandler = () => {
     if (props.timerStarted) return;
+
     if (props.isBreak) {
       if (props.breakLength === 1) return;
+
       props.decrementClickHandler({
         breakLength: props.breakLength,
         isBreak: true,
@@ -42,6 +46,7 @@ const LengthControl = props => {
       });
     } else {
       if (props.sessionLength === 1) return;
+
       props.decrementClickHandler({
         sessionLength: props.sessionLength,
         isBreak: false,
@@ -58,9 +63,11 @@ const LengthControl = props => {
           size={window.innerWidth < 600 ? "lg" : "2x"}
         />
       </button>
+
       <div id={props.lengthId}>
         {props.isBreak ? props.breakLength : props.sessionLength}
       </div>
+
       <button id={props.incrementId} onClick={incrementClickHandler}>
         <FontAwesomeIcon
           icon={faArrowCircleUp}
