@@ -16,13 +16,21 @@ const TimerControl = props => {
 
   return (
     <div className="timer-control">
-      <button id="start_stop" onClick={() => props.startOrStopTimer()}>
+      <button
+        className="a-controlButton"
+        id="start_stop"
+        onClick={() => props.startOrStopTimer()}
+      >
         <FontAwesomeIcon
           icon={!props.timerStarted ? faPlay : faPause}
           size="2x"
         />
       </button>
-      <button id="reset" onClick={resetClickHandler}>
+      <button
+        className="a-controlButton"
+        id="reset"
+        onClick={resetClickHandler}
+      >
         <FontAwesomeIcon
           icon={faRedoAlt}
           size="2x"

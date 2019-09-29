@@ -8,7 +8,7 @@ const Lengths = () => {
     breakStyle = { marginRight: "0" };
   }
   return (
-    <div className="lengths">
+    <div className="m-controlList">
       <Length
         labelId="break-label"
         lengthName="Break Length"

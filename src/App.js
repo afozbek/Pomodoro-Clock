@@ -8,8 +8,8 @@ import TimerControl from "./components/Timer/TimerControl";
 
 const App = () => {
   return (
-    <div className="main-wrapper" id="app">
-      <h2 className="title">Pomodoro Clock</h2>
+    <div className="o-mainWrapper" id="app">
+      <h2 className="o-mainWrapper__title">Pomodoro Clock</h2>
       <Lengths />
 
       <Timer />

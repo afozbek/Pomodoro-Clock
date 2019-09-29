@@ -31,7 +31,9 @@ const Timer = props => {
   return (
     <div className="timer">
       <div className="timer-wrapper" style={style}>
-        <div id="timer-label">{props.label}</div>
+        <div className="a-label" id="timer-label">
+          {props.label}
+        </div>
         <div id="time-left">
           <span>
             {props.remMinutes < 10 ? "0" + props.remMinutes : props.remMinutes}
