@@ -56,19 +56,27 @@ const LengthControl = props => {
   };
 
   return (
-    <div className="lengths__length__controls">
-      <button id={props.decrementId} onClick={decrementClickHandler}>
+    <div className="m-controlItem__controls">
+      <button
+        className="a-controlButton"
+        id={props.decrementId}
+        onClick={decrementClickHandler}
+      >
         <FontAwesomeIcon
           icon={faArrowCircleDown}
           size={window.innerWidth < 600 ? "lg" : "2x"}
         />
       </button>
 
-      <div id={props.lengthId}>
+      <div className="m-controlItem__label" id={props.lengthId}>
         {props.isBreak ? props.breakLength : props.sessionLength}
       </div>
 
-      <button id={props.incrementId} onClick={incrementClickHandler}>
+      <button
+        className="a-controlButton"
+        id={props.incrementId}
+        onClick={incrementClickHandler}
+      >
         <FontAwesomeIcon
           icon={faArrowCircleUp}
           size={window.innerWidth < 600 ? "lg" : "2x"}

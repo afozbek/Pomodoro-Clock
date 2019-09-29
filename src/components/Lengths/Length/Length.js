@@ -4,8 +4,10 @@ import LengthControl from "./LengthControl";
 
 const Length = props => {
   return (
-    <div className="lengths__length" style={props.style ? props.style : null}>
-      <div id={props.labelId}>{props.lengthName}</div>
+    <div className="m-controlItem" style={props.style ? props.style : null}>
+      <div className="a-label" id={props.labelId}>
+        {props.lengthName}
+      </div>
 
       <LengthControl
         isBreak={props.style ? true : false}

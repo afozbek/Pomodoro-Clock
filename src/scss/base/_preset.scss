@@ -11,3 +11,51 @@
   margin: 0;
   border: 0;
 }
+
+@font-face {
+  font-family: "Digital";
+  src: url("../assets/digital-7.regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url("../assets/Righteous-Regular.ttf") format("truetype");
+}
+
+html {
+  font-size: 16px;
+  @media screen and (max-width: 400px) {
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 600px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 601px) and (max-width: 700px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  background-color: $primary-color;
+  font-family: "Righteous", cursive;
+  color: white;
+  text-align: center;
+}
+
+svg {
+  font-size: 16px;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+}

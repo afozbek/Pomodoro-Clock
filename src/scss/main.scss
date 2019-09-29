@@ -11,8 +11,7 @@
 @import "./shared/general";
 
 /* LAYOUTS */
+@import "./layouts/mainWrapper";
 
 /* COMPONENTS */
-
-/* APP - WILL BE REMOVED */
-@import "./app";
+@import "./components/main";

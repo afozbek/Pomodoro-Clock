@@ -15,14 +15,22 @@ const TimerControl = props => {
   };
 
   return (
-    <div className="timer-control">
-      <button id="start_stop" onClick={() => props.startOrStopTimer()}>
+    <div className="m-timerControl">
+      <button
+        className="a-controlButton -timerControl"
+        id="start_stop"
+        onClick={() => props.startOrStopTimer()}
+      >
         <FontAwesomeIcon
           icon={!props.timerStarted ? faPlay : faPause}
           size="2x"
         />
       </button>
-      <button id="reset" onClick={resetClickHandler}>
+      <button
+        className="a-controlButton -timerControl"
+        id="reset"
+        onClick={resetClickHandler}
+      >
         <FontAwesomeIcon
           icon={faRedoAlt}
           size="2x"
