@@ -15,9 +15,9 @@ const TimerControl = props => {
   };
 
   return (
-    <div className="timer-control">
+    <div className="m-timerControl">
       <button
-        className="a-controlButton"
+        className="a-controlButton -timerControl"
         id="start_stop"
         onClick={() => props.startOrStopTimer()}
       >
@@ -27,7 +27,7 @@ const TimerControl = props => {
         />
       </button>
       <button
-        className="a-controlButton"
+        className="a-controlButton -timerControl"
         id="reset"
         onClick={resetClickHandler}
       >
