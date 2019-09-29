@@ -1,0 +1,17 @@
+.o-mainWrapper {
+  width: 31.5rem;
+  margin-top: 30px;
+  @media screen and (min-height: 700px) {
+    margin: 0;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 3.1rem;
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 2rem;
+    }
+  }
+}
