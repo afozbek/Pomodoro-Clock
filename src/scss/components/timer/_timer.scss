@@ -1,0 +1,39 @@
+.m-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+
+  margin: 0.6rem auto;
+  width: 17rem;
+  border: 7px solid #13353a;
+  border-radius: 40px;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+    width: 20rem;
+  }
+  @media screen and (min-width: 601px) and (max-width: 700px) {
+    width: 18rem;
+  }
+
+  &__wrapper {
+    margin: 1.2rem 0;
+
+    @media screen and (max-width: 600px) {
+      margin: 1.5rem 0;
+    }
+  }
+
+  &__timeLeft {
+    margin-top: 0.2rem;
+    font-family: "Digital", sans-serif;
+    font-size: 4.5rem;
+  }
+}
